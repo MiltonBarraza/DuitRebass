@@ -1,0 +1,31 @@
+@import "../../assets/variables";
+
+.container {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0 0 3px 1px lightgrey;
+    padding: 20px;
+
+    .imageContainer {
+        width: 65%;
+        height: 42%;
+        position: relative;
+    }
+
+    .tarjetaContactoTexto {
+        line-height: 20px;
+        padding: 10px;
+        font-size: 15px;
+
+        a {
+            color: $rojo-1;
+        }
+
+        p {
+            line-height: 20px;
+        }
+    }
+}
