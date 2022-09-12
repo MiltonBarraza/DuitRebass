@@ -16,3 +16,17 @@ a {
   color: #707070;
   line-height: 27px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .ocultarEnMovil,
+  .mostrarEnDesktop  {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .mostrarEnMovil,
+  .ocultarEnDesktop  {
+    display: none !important;
+  }
+}
