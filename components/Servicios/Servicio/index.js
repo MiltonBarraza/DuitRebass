@@ -32,21 +32,19 @@ const Servicio = ({ servicio }) => {
     >
       <ImagenServicio>
         <Image
-          src={`/images/servicios/${servicio.imagen}`}
+          src={`/imagenes/servicios/${servicio.imagen}`}
           alt={`${servicio.imagen}`}
-          width={135}
-          height={135}
+          layout="fill"
+          objectFit="contain"
         />
       </ImagenServicio>
-
     </Tooltip>
-
   } if (servicio.imagen && servicio.tieneLink) {
     return (
       <ImagenServicio>
         <Link href={`${servicio.IrA.fragmento}`}><a>
           <Image
-            src={`/images/servicios/${servicio.imagen}`}
+            src={`/imagenes/servicios/${servicio.imagen}`}
             alt={`${servicio.imagen}`}
             layout="fill"
             objectFit="contain"
@@ -59,7 +57,7 @@ const Servicio = ({ servicio }) => {
       <ImagenServicio>
         <a href={`${servicio.IrA.fragmento}`}>
           <Image
-            src={`/images/servicios/${servicio.imagen}`}
+            src={`/imagenes/servicios/${servicio.imagen}`}
             alt={`${servicio.imagen}`}
             layout="fill"
             objectFit="contain"

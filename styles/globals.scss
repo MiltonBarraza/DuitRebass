@@ -13,7 +13,7 @@ a {
   padding: 0;
   font-family: "Varela Round", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: none;
-  color: #707070;
+  // color: #707070;
   line-height: 27px;
 }
 
@@ -34,38 +34,8 @@ a {
   flex-direction: column;
   box-shadow: 0px 0px 0px 3px rgb(0 0 0 / 30%);
   border-radius: 5px;
-
-  p {
-    font-size: 15px;
-    margin: 0 0 17px;
-  }
+  
 }
-
-.verdeWhatsapp, .servicioMail {
-  font-size: 30px;
-  cursor: pointer;
-  font-weight: 400;
-  max-width: 200px;
-}
-
-.verdeWhatsapp {
-  color:  #128c7e;
-}
-
-.servicioMail {
-  color: #de576b;
-}
-
-.iconoTarjetaConsejeros {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-around;
-}
-
-
-
-
 
 @media only screen and (max-width: 1024px) {
   .ocultarEnMovil,

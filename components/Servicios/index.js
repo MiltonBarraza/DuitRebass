@@ -7,7 +7,6 @@ import {
   ContenedorImagenes,
 } from "./styles";
 
-
 const Servicios = () => {
   return (
       <ContenedorPrincipal>

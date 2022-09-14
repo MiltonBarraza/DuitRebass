@@ -1,4 +1,4 @@
-import { Flex, Box } from "rebass";
+import { Flex } from "rebass";
 import styled from "styled-components";
 
 const ImagenServicio = styled(Flex)`
@@ -8,16 +8,9 @@ const ImagenServicio = styled(Flex)`
   justify-content: center;
 
 @media only screen and (max-width: 1024px) {
-  Imagenes {
-    width: 100px !important;
-    height: 100px !important;
+    width: 100px;
+    height: 100px;
   }
-
-  div:nth-child(1) {
-    width: 100px !important;
-    height: 60px !important;
-  }
-}
 `;
 
 const TextoTooltip = styled.p`
@@ -45,7 +38,7 @@ const IconoMail = styled.a`
   font-weight: 400;
   max-width: 200px;
   color: #de576b;
-`
+`;
 
 export {
   ImagenServicio,
