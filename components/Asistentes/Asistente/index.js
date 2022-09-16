@@ -15,7 +15,7 @@ const Asistente = ({ asistente }) => {
   if (asistente.posicion === 'Consejera' || asistente.posicion === 'Consejero' || asistente.posicion === 'Asesor') {
     return <TarjetaAsistente>
       <Image
-        src={`/imagenes/asistentes/${asistente.foto}`}
+        src={`/imagenes/consejeros/${asistente.foto}`}
         alt={asistente.foto}
         width={100}
         height={100}
