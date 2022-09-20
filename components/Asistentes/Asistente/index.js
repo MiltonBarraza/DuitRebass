@@ -12,7 +12,7 @@ import {
 
 const Asistente = ({ asistente }) => {
 
-  if (asistente.posicion === 'Consejera' || asistente.posicion === 'Consejero' || asistente.posicion === 'Asesor') {
+  if (!asistente.ocultarEnAsistentes) {
     return <TarjetaAsistente>
       <Image
         src={`/imagenes/consejeros/${asistente.foto}`}

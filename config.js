@@ -138,6 +138,7 @@ export const Consejeros = [
         linkedin: '',
         instagram: '',
         foto: 'recepcion-profile.jpg',
+        ocultarEnAsistentes: true,
     },
     {
         nombre: 'Santiago Paulus',
