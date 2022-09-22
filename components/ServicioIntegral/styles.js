@@ -9,22 +9,22 @@ const ContenedorPrincipal = styled(Flex)`
   height: 700px;
   position: absolute;
 
-  > div :not(first-of-type) {
-    position: absolute;
-    border-radius: 50%;
-    background-color: #e02e21;
+    div :not(first-of-type) {
+      position: absolute;
+      border-radius: 50%;
+      background-color: #e02e21;
 
-    @media only screen and (max-width: 1024px) {
-      position: relative;
-      top: 0!important;
-      right: 0;
-      left: 0!important;
-      max-width: 140px;
-      max-height: 140px;
+      @media only screen and (max-width: 1024px) {
+        position: relative;
+        top: 0!important;
+        right: 0;
+        left: 0!important;
+        max-width: 140px;
+        max-height: 140px;
+        }
       }
-    }
 
-  div :nth-child(1) {
+  div:nth-child(1) {
     width: 1000px;
     height: 500px;
     position: relative;
@@ -34,12 +34,12 @@ const ContenedorPrincipal = styled(Flex)`
     }
   }
 
-  div >:nth-child(1n+2) {
+  div:nth-child(1n+2) {
     width: 140px;
     height: 140px;
   }
 
-  div >:nth-child(2) {
+  div:nth-child(2) {
     top: 70px;
     left: 40px;
   }
