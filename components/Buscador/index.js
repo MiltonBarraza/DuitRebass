@@ -1,3 +1,5 @@
+import {  } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   ContenedorPrincipal,
   Titulo,
@@ -8,11 +10,11 @@ import {
 
 const ListaDeBusqueda = () => {
   return (
-    <ContenedorPrincipal>
-      <Titulo></Titulo>
+    <ContenedorPrincipal className="ocultarEnMovil">
+      <Titulo>duit emprendimientos</Titulo>
       <Buscador>
-        <CampoDeTexto></CampoDeTexto>
-        <IconoBuscador></IconoBuscador>
+        <CampoDeTexto type={"text"} placeholder={"Ingresá barrio, ciudad o emprendimiento"}></CampoDeTexto>
+        <IconoBuscador href={"./home"}><FontAwesomeIcon icon={faSearch} /></IconoBuscador>
       </Buscador>
     </ContenedorPrincipal>
   )
