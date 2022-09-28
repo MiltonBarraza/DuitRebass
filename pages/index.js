@@ -1,4 +1,4 @@
-import Contacto from "../components/Contacto";
+import Contacto from "../components/Contacto/index";
 
 export default function Main() {
   return (

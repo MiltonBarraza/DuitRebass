@@ -1,20 +1,6 @@
 import styled, { css } from "styled-components";
 import { Flex } from "rebass";
 
-export {
-  EstilosCompatidos,
-  EstilosCompatidosLabels,
-  ContenedorSeccionContacto,
-  ContenedorPrincipalContacto,
-  Descripción,
-  ContenedorFormulario,
-  ContenedorCampoDeTexto,
-  CampoDeTexto,
-  Etiqueta,
-  AreaDeTexto,
-  BotonContacto
-}
-
 const EstilosCompatidos = css`
   height: 51px;
   outline: 0;
@@ -38,29 +24,6 @@ const EstilosCompatidosLabels = css`
   transition: all 200ms;
   opacity: 0.5;
   cursor: text;
-`;
-
-const ContenedorSeccionContacto = styled(Flex)`
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    max-width: 1200px;
-    font-size: 15px;
-    line-height: 27px;
-    `
-
-const ContenedorPrincipalContacto = styled(Flex)`
-  flex-direction: column;
-  padding: 20px;
-`;
-
-const Descripción = styled.h3`
-  margin: 0 0 20px 0;
-  line-height: 50px;
-  font-size: 24px;
-  color: #333;
-  font-weight: 500;
 `;
 
 const ContenedorFormulario = styled(Flex)`
@@ -106,39 +69,49 @@ const ContenedorCampoDeTexto = styled(Flex)`
     font-size: 16px;
     font-weight: normal;
     user-select: none;
-    pointer-events: none;
     ${EstilosCompatidosLabels};
   `;
 
   const AreaDeTexto = styled.textarea`
-  min-height: 130px;
-  transition: none!important;
-  min-width: 100%;
-  padding: 20px;
-  ${EstilosCompatidos};
-  &:focus + label,
-  :not(:placeholder-shown) + label {
-    transform: translateY(-75px);
-    font-size: 90%;
-    opacity: 1;
-  }
-`;
+    min-height: 130px;
+    transition: none!important;
+    min-width: 100%;
+    padding: 20px;
+    ${EstilosCompatidos};
+    &:focus + label,
+    :not(:placeholder-shown) + label {
+      transform: translateY(-75px);
+      font-size: 90%;
+      opacity: 1;
+    }
+  `;
 
   const BotonContacto = styled.button`
-    width: 100%;
-    max-width: 300px;
-    border-radius: 10px;
-    z-index: 10;
-    background-color: #e02e21;
-    top: 0;
-    padding: 10px 20px;
-    color: #fff;
-    position: relative;
-    font-size: 15px;
-    font-weight: 500;
-    transition: all .2s ease-in-out;
-    cursor: pointer;
-    margin-right: 6px;
-    overflow: hidden;
-    border: 0;
-`;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+      z-index: 10;
+      background-color: #e02e21;
+      top: 0;
+      padding: 10px 20px;
+      color: #fff;
+      position: relative;
+      font-size: 15px;
+      font-weight: 500;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+      margin-right: 6px;
+      overflow: hidden;
+      border: 0;
+  `;
+
+  export {
+    EstilosCompatidos,
+    EstilosCompatidosLabels,
+    ContenedorFormulario,
+    ContenedorCampoDeTexto,
+    CampoDeTexto,
+    Etiqueta,
+    AreaDeTexto,
+    BotonContacto,
+} 
