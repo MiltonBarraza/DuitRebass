@@ -41,18 +41,22 @@ const EstilosCompatidosLabels = css`
 `;
 
 const ContenedorSeccionContacto = styled(Flex)`
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    max-width: 1200px;
-    font-size: 15px;
-    line-height: 27px;
-    `
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  max-width: 1200px;
+  font-size: 15px;
+  line-height: 27px;
+`;
 
 const ContenedorPrincipalContacto = styled(Flex)`
   flex-direction: column;
   padding: 20px;
+
+  @media only screen and (min-width: 1024px) {
+    flex: 0 0 45%;
+  }
 `;
 
 const Descripción = styled.h3`
@@ -72,7 +76,7 @@ const ContenedorFormulario = styled(Flex)`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-}
+  }
   @media only screen and (min-width: 1024px) {
     >div:nth-child(5) {
       flex: 1 1 100%;
@@ -111,16 +115,16 @@ const ContenedorCampoDeTexto = styled(Flex)`
   `;
 
   const AreaDeTexto = styled.textarea`
-  min-height: 130px;
-  transition: none!important;
-  min-width: 100%;
-  padding: 20px;
-  ${EstilosCompatidos};
-  &:focus + label,
-  :not(:placeholder-shown) + label {
-    transform: translateY(-75px);
-    font-size: 90%;
-    opacity: 1;
+    min-height: 130px;
+    transition: none!important;
+    min-width: 100%;
+    padding: 20px;
+    ${EstilosCompatidos};
+    &:focus + label,
+    :not(:placeholder-shown) + label {
+      transform: translateY(-75px);
+      font-size: 90%;
+      opacity: 1;
   }
 `;
 
@@ -141,4 +145,12 @@ const ContenedorCampoDeTexto = styled(Flex)`
     margin-right: 6px;
     overflow: hidden;
     border: 0;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      flex: 0 0 48%;
+    }
 `;

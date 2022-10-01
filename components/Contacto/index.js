@@ -1,3 +1,5 @@
+import TarjetaContacto from "../TarjetaContacto";
+
 import {
   ContenedorSeccionContacto,
   ContenedorPrincipalContacto,
@@ -42,6 +44,7 @@ const Contacto = () => {
           <div></div>
         </ContenedorFormulario>
       </ContenedorPrincipalContacto>
+      <TarjetaContacto/>
     </ContenedorSeccionContacto>
   )
 }
