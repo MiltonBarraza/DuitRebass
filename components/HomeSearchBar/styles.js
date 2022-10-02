@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Flex } from "rebass";
+import { Box, Flex } from "rebass";
 
-const ContenedorPrincipal = styled(Flex)`
+const ContenedorPrincipal = styled(Box)`
   background-image: url(imagenes/familia.png);
   background-attachment: fixed;
   background-position: 50% -64.3617px;  
@@ -18,7 +18,7 @@ const ContenedorPrincipal = styled(Flex)`
   }
 `;
 
-const Fondo =styled(Flex) `
+const Fondo =styled(Box) `
   background-color: rgb(54, 56, 62);
   position: absolute;
   top: 0;
@@ -28,7 +28,7 @@ const Fondo =styled(Flex) `
   opacity: .4;
 `;
 
-const IconoAsistente = styled.i`
+const IconoAsistente = styled.a`
   position: absolute;
   right: 25px;
   width: 180px;
@@ -43,17 +43,17 @@ const IconoAsistente = styled.i`
   color: #e02e21
 `;
 
-const ContenedorSecundario = styled(Flex)`
+const ContenedorSecundario = styled(Box)`
   position: relative;
   z-index: 10;
-  padding: 180px px;
+  padding: 180px 0;
 
   media only screen and (min-width: 1024px) {
     padding: 20vh 0;
   }
 `;
 
-const ContenedorBuscador = styled(Flex)`
+const ContenedorBuscador = styled(Box)`
 `;
 
 const Encabezado = styled.h2`
@@ -64,10 +64,12 @@ const Encabezado = styled.h2`
   margin-bottom: 10px;
   font-weight: 500;
   line-height: 1.1;
-  margin-block-start: 0.83em;
-  margin-block-end: 0.83em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+ 
+  strong {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+  }
 }
 `;
 
@@ -88,7 +90,7 @@ const TipoDeBusqueda = styled(Flex)`
   text-align: center;
 `;
 
-const EtiquetaAlquiler = styled.label`
+const Etiqueta = styled.label`
   background-color: #fff;
   color: #333;
   cursor: pointer;
@@ -103,3 +105,113 @@ const EtiquetaAlquiler = styled.label`
   font-size: 16px;
   font-weight: normal;
 `;
+
+const ContenedorTipoDePropiedad = styled(Box)`
+  height: 35px; // tiene que venir de arriba
+  max-width: 250px; // tiene que venir de arriba
+  width: 100%;
+  transition: box-shadow 0.3s ease-in-out;
+  border-radius: 10px;
+  outline: none !important;
+`;
+
+const AnclaTipoDePropiedad = styled.a`
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 0 0 0 18px;
+  height: 35px;
+  line-height: 51px;
+  border: 1px solid #e0e0e0;
+  background-color: #fcfcfc;
+  color: #888;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 18px;
+  z-index: 100;
+  border-radius: 10px;
+  outline: none !important;
+  transition: color .2s;
+`;
+
+const IconoTipoDePropiedad = styled.i`
+  margin-right: 2rem;
+  transition: all 0.2s;
+  font-size: 2rem;
+  font-weight: 900;
+  //falta el evento de dar vuelta la flecha
+`;
+
+// const Pestaña desplegable = styled.ul``
+
+const BotonBusqueda = styled.button`
+  width: 100%;
+  min-width: 150px;
+  margin-left: 15px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #e02e21
+  top: 0;
+  padding: 10px 20px;
+  color: #fff;
+  position: relative;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  margin-right: 6px;
+  overflow: hidden;
+  border: 0;
+
+  height: 35px; // del formilario viene arriba viene
+  max-width: 250px; // del formilario viene arriba viene
+
+  &:before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all .2s;
+  }
+`;
+
+const iconoBuscar = styled.button`
+  padding-left: 5px;
+  padding-right: 4px;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  font-size: 16px;
+`;
+//ver porque hay cosas que pasa con el submit y otras movidas
+
+export{
+  ContenedorPrincipal,
+  Fondo,
+  IconoAsistente,
+  ContenedorSecundario,
+  ContenedorBuscador,
+  Encabezado,
+  Buscador,
+  TipoDeBusqueda,
+  Etiqueta,
+  ContenedorTipoDePropiedad,
+  AnclaTipoDePropiedad,
+  IconoTipoDePropiedad,
+  BotonBusqueda,
+  iconoBuscar
+}
