@@ -73,7 +73,7 @@ const Encabezado = styled.h2`
 }
 `;
 
-const Buscador = styled(Flex)`
+const FormularioBuscador = styled(Flex)`
     margin-top: 20px;
     justify-content: center;
     align-items: center;
