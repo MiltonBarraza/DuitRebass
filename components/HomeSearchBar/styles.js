@@ -40,7 +40,17 @@ const IconoAsistente = styled.a`
   position: fixed;
   height: fit-content;
   outline: none !important;
-  color: #e02e21
+  color: #e02e21;
+
+  @media only screen and (max-width: 1024px) {
+    left: 30px;
+    width: 25%;
+    min-width: 125px;
+    max-width: 150px;
+    bottom: 28px;
+    opacity: 1;
+    top: unset;
+  }
 `;
 
 const ContenedorSecundario = styled(Box)`
@@ -48,12 +58,15 @@ const ContenedorSecundario = styled(Box)`
   z-index: 10;
   padding: 180px 0;
 
-  media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     padding: 20vh 0;
   }
 `;
 
 const ContenedorBuscador = styled(Box)`
+  @media (max-width: 767px) {
+    padding: 0px 15px;
+  }
 `;
 
 const Encabezado = styled.h2`
@@ -70,29 +83,66 @@ const Encabezado = styled.h2`
     color: #fff;
     font-size: 36px;
   }
-}
+
+  @media (max-width: 767px) {
+    text-align: center;
+    font-size: 27px;
+  }
 `;
 
 const FormularioBuscador = styled(Flex)`
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 
+  > * {
+    height: 35px;
+    max-width: 250px;
+    }
+
+    @media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 767px) {
     > * {
-      height: 35px;
-      max-width: 250px;
-     }
+      margin-bottom: 15px;
+      max-width: 400px;
+    }
+  }
 `;
 
 const TipoDeBusqueda = styled(Flex)`
   padding-bottom: 35px;
   position: relative;
   text-align: center;
+
+  > * {
+    height: 35px;
+    line-height: normal;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    > *:first-child {
+      margin-right: 15px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    > * {
+      margin: 0px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 const Etiqueta = styled.label`
-  background-color: #fff;
-  color: #333;
+  background-color: #e02e21;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -100,10 +150,14 @@ const Etiqueta = styled.label`
   margin: 0 15px 0 0;
   float: left;
   transition: all .2s;
-  border-radius: 3px; // Tiene que venir de arriba y ser 10
   width: 100px;
   font-size: 16px;
   font-weight: normal;
+
+  @media (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `;
 
 const ContenedorTipoDePropiedad = styled(Box)`
@@ -206,7 +260,7 @@ export{
   ContenedorSecundario,
   ContenedorBuscador,
   Encabezado,
-  Buscador,
+  FormularioBuscador,
   TipoDeBusqueda,
   Etiqueta,
   ContenedorTipoDePropiedad,

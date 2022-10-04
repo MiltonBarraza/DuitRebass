@@ -6,7 +6,7 @@ import {
   ContenedorSecundario,
   ContenedorBuscador,
   Encabezado,
-  Buscador,
+  FormularioBuscador,
   TipoDeBusqueda,
   Etiqueta,
   ContenedorTipoDePropiedad,
@@ -31,7 +31,7 @@ const BarraBuscadorHome = () => {
       <ContenedorSecundario>
         <ContenedorBuscador>
           <Encabezado>Encontrá el <strong>lugar</strong>, construí tu <strong>historia</strong>.</Encabezado>
-          <Buscador>
+          <FormularioBuscador>
             <TipoDeBusqueda>
               <Etiqueta>Alquiler</Etiqueta> {/*ver si les agrego compra y venta a las etiquetas */}
               <Etiqueta>Venta</Etiqueta>
@@ -45,7 +45,7 @@ const BarraBuscadorHome = () => {
                 <iconoBuscar></iconoBuscar>
               </BotonBusqueda>
             </ContenedorTipoDePropiedad>
-          </Buscador>
+          </FormularioBuscador>
         </ContenedorBuscador>
       </ContenedorSecundario>
     </ContenedorPrincipal>
