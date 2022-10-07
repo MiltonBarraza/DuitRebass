@@ -18,7 +18,7 @@ const ContenedorPrincipal = styled(Box)`
   }
 `;
 
-const Fondo =styled(Box) `
+const Fondo = styled(Box)`
   background-color: rgb(54, 56, 62);
   position: absolute;
   top: 0;
@@ -98,9 +98,9 @@ const FormularioBuscador = styled(Flex)`
   > * {
     height: 35px;
     max-width: 250px;
-    }
+  }
 
-    @media (max-width: 767px) {
+  @media (max-width: 767px) {
     flex-direction: column;
   }
 
@@ -112,37 +112,9 @@ const FormularioBuscador = styled(Flex)`
   }
 `;
 
-const TipoDeBusqueda = styled(Flex)`
-  padding-bottom: 35px;
-  position: relative;
-  text-align: center;
-
-  > * {
-    height: 35px;
-    line-height: normal;
-    border-radius: 10px;
-  }
-  
-  @media (max-width: 767px) {
-    > *:first-child {
-      margin-right: 15px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    > * {
-      margin: 0px;
-    }
-  }
-
-  @media (max-width: 767px) {
-    width: 100%;
-  }
-`;
-
-const Etiqueta = styled.label`
-  background-color: #e02e21;
-  color: #fff;
+const Etiquetas = styled.label`
+  background-color: #fff;
+  color: #333;
   cursor: pointer;
   display: inline-block;
   text-align: center;
@@ -154,6 +126,11 @@ const Etiqueta = styled.label`
   font-size: 16px;
   font-weight: normal;
 
+  &:hover {
+    background-color: #e02e21;
+    color: #fff;
+  }
+
   @media (max-width: 767px) {
     width: 100%;
     margin-bottom: 10px;
@@ -161,8 +138,6 @@ const Etiqueta = styled.label`
 `;
 
 const ContenedorTipoDePropiedad = styled(Box)`
-  height: 35px; // tiene que venir de arriba
-  max-width: 250px; // tiene que venir de arriba
   width: 100%;
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 10px;
@@ -190,14 +165,30 @@ const AnclaTipoDePropiedad = styled.a`
   border-radius: 10px;
   outline: none !important;
   transition: color .2s;
+  font-size: 15px;
 `;
 
-const IconoTipoDePropiedad = styled.i`
-  margin-right: 2rem;
+const ListaDeTipos = styled.ul`
+
+`
+
+const TiposDePropiedad = styled.li`
+
+`
+
+const IconoTipoDePropiedad = styled.i.attrs(
+  (props) => ({}))`
+  margin-right: 20px;
   transition: all 0.2s;
-  font-size: 2rem;
-  font-weight: 900;
-  //falta el evento de dar vuelta la flecha
+  font-size: 20px;
+  font-weight: 100;
+  margin-top: 3px; // se le agrego extra por la diferencia de Icono
+
+  ${(props) =>
+    props.active &&
+    `
+      transform: rotateX(180deg);
+  `}
 `;
 
 // const Pestaña desplegable = styled.ul``
@@ -211,7 +202,7 @@ const BotonBusqueda = styled.button`
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background-color: #e02e21
+  background-color: #e02e21;
   top: 0;
   padding: 10px 20px;
   color: #fff;
@@ -222,38 +213,40 @@ const BotonBusqueda = styled.button`
   overflow: hidden;
   border: 0;
 
-  height: 35px; // del formilario viene arriba viene
-  max-width: 250px; // del formilario viene arriba viene
-
   &:before {
-  width: 100%;
-  height: 100%;
-  content: "";
-  display: block;
-  background-color: #fff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: all .2s;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all .2s;
   }
+    &:hover:before {
+      opacity: .1
+    }
+  
 `;
 
-const iconoBuscar = styled.button`
+const IconoBuscar = styled.i`
   padding-left: 5px;
   padding-right: 4px;
   font-weight: 900;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
   line-height: 1;
   font-size: 16px;
+  color: #fff; // no me queda blanco el icono
+  cursor: pointer;
+
+  svg {
+    color: #fff; // un exceso
+  }
 `;
 //ver porque hay cosas que pasa con el submit y otras movidas
 
-export{
+export {
   ContenedorPrincipal,
   Fondo,
   IconoAsistente,
@@ -261,11 +254,10 @@ export{
   ContenedorBuscador,
   Encabezado,
   FormularioBuscador,
-  TipoDeBusqueda,
-  Etiqueta,
+  Etiquetas,
   ContenedorTipoDePropiedad,
   AnclaTipoDePropiedad,
   IconoTipoDePropiedad,
   BotonBusqueda,
-  iconoBuscar
+  IconoBuscar
 }

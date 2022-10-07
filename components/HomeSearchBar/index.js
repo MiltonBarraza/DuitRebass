@@ -1,4 +1,10 @@
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import React, { useState } from "react";
+import Ejemplo from "./Ejemplo";
+import ContenedorPropiedad from "./ContenedorPropiedad";
+import Etiqueta from "./Etiquetas";
 import {
   ContenedorPrincipal,
   Fondo,
@@ -7,14 +13,11 @@ import {
   ContenedorBuscador,
   Encabezado,
   FormularioBuscador,
-  TipoDeBusqueda,
-  Etiqueta,
-  ContenedorTipoDePropiedad,
-  AnclaTipoDePropiedad,
-  IconoTipoDePropiedad,
+  Etiquetas,
   BotonBusqueda,
-  iconoBuscar
+  IconoBuscar,
 } from "./styles";
+
 
 const BarraBuscadorHome = () => {
   return (
@@ -22,32 +25,25 @@ const BarraBuscadorHome = () => {
       <Fondo></Fondo>
       <IconoAsistente href="/asistente">
         <Image
-        src={"/imagenes/boton-asistente.png"}
-        alt="Circulo rojo, asistente inmobiliario personal"
-        width={180}
-        height={180}
+          src={"/imagenes/boton-asistente.png"}
+          alt="Circulo rojo, asistente inmobiliario personal"
+          width={180}
+          height={180}
         />
       </IconoAsistente>
       <ContenedorSecundario>
         <ContenedorBuscador>
           <Encabezado>Encontrá el <strong>lugar</strong>, construí tu <strong>historia</strong>.</Encabezado>
           <FormularioBuscador>
-            <TipoDeBusqueda>
-              <Etiqueta>Alquiler</Etiqueta> {/*ver si les agrego compra y venta a las etiquetas */}
-              <Etiqueta>Venta</Etiqueta>
-            </TipoDeBusqueda>
-            <ContenedorTipoDePropiedad>
-              <AnclaTipoDePropiedad>
-                <IconoTipoDePropiedad></IconoTipoDePropiedad>
-                {/* Un UL falta */}
-              </AnclaTipoDePropiedad>
-              <BotonBusqueda>
-                <iconoBuscar></iconoBuscar>
-              </BotonBusqueda>
-            </ContenedorTipoDePropiedad>
+            <Etiqueta /> {/*ver si les agrego compra y venta a las etiquetas */}
+            <ContenedorPropiedad />
+            <BotonBusqueda> Buscar
+              <IconoBuscar><FontAwesomeIcon icon={faSearch} /></IconoBuscar>
+            </BotonBusqueda>
           </FormularioBuscador>
         </ContenedorBuscador>
       </ContenedorSecundario>
+      <Ejemplo />
     </ContenedorPrincipal>
   )
 }
