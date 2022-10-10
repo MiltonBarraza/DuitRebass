@@ -13,10 +13,11 @@ import {
   ContenedorBuscador,
   Encabezado,
   FormularioBuscador,
-  Etiquetas,
+  // Etiquetas,
   BotonBusqueda,
   IconoBuscar,
 } from "./styles";
+import DropDown from "./Dropdown";
 
 
 const BarraBuscadorHome = () => {
@@ -36,7 +37,8 @@ const BarraBuscadorHome = () => {
           <Encabezado>Encontrá el <strong>lugar</strong>, construí tu <strong>historia</strong>.</Encabezado>
           <FormularioBuscador>
             <Etiqueta /> {/*ver si les agrego compra y venta a las etiquetas */}
-            <ContenedorPropiedad />
+            {/* <ContenedorPropiedad /> */}
+            <DropDown/>
             <BotonBusqueda> Buscar
               <IconoBuscar><FontAwesomeIcon icon={faSearch} /></IconoBuscar>
             </BotonBusqueda>

@@ -6,6 +6,7 @@ const ContenedorTipoDePropiedad = styled(Box)`
   transition: box-shadow 0.3s ease-in-out;
   border-radius: 10px;
   outline: none !important;
+  
 `;
 
 const AnclaTipoDePropiedad = styled.a`
