@@ -12,7 +12,7 @@ color: red;
 
 
 
-> div {
+> cdiv {
     max-height: 35px;
     color: #888;
     min-height: 35px;
