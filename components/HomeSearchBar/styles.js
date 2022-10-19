@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Box, Flex } from "rebass";
+import { Box } from "rebass";
 
-const ContenedorPrincipal = styled(Box)`
+const ContenedorPrincipal = styled.section`
   background-image: url(imagenes/familia.png);
   background-attachment: fixed;
   background-position: 50% -64.3617px;  
@@ -15,6 +15,10 @@ const ContenedorPrincipal = styled(Box)`
   @media only screen and (min-width: 1024px) {
     min-height: 400px;
     height: 50vh;
+  }
+
+  @media (max-width: 767px) {
+    height: 450px;
   }
 `;
 
@@ -61,9 +65,17 @@ const ContenedorSecundario = styled(Box)`
   @media only screen and (min-width: 1024px) {
     padding: 20vh 0;
   }
+
+  @media (max-width: 767px) {
+    padding: 70px 0;
+  }
 `;
 
 const ContenedorBuscador = styled(Box)`
+  @media (max-width: 767px) {
+    padding: 0px 15px;
+  }
+
   @media (max-width: 767px) {
     padding: 0px 15px;
   }
@@ -82,6 +94,11 @@ const Encabezado = styled.h2`
     text-align: center;
     color: #fff;
     font-size: 36px;
+
+    @media (max-width: 767px) {
+      text-align: center;
+      font-size: 27px;
+    }
   }
 
   @media (max-width: 767px) {
@@ -90,7 +107,8 @@ const Encabezado = styled.h2`
   }
 `;
 
-const FormularioBuscador = styled(Flex)`
+const FormularioBuscador = styled.form`
+  display: flex !important;
   margin-top: 20px;
   justify-content: center;
   align-items: center;
@@ -102,6 +120,10 @@ const FormularioBuscador = styled(Flex)`
 
   @media (max-width: 767px) {
     flex-direction: column;
+
+    button {
+      margin: 0px !important;
+    }
   }
 
   @media (max-width: 767px) {
@@ -111,87 +133,6 @@ const FormularioBuscador = styled(Flex)`
     }
   }
 `;
-
-const Etiquetas = styled.label`
-  background-color: #fff;
-  color: #333;
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  padding: 9px 18px;
-  margin: 0 15px 0 0;
-  float: left;
-  transition: all .2s;
-  width: 100px;
-  font-size: 16px;
-  font-weight: normal;
-
-  &:hover {
-    background-color: #e02e21;
-    color: #fff;
-  }
-
-  @media (max-width: 767px) {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-`;
-
-const ContenedorTipoDePropiedad = styled(Box)`
-  width: 100%;
-  transition: box-shadow 0.3s ease-in-out;
-  border-radius: 10px;
-  outline: none !important;
-`;
-
-const AnclaTipoDePropiedad = styled.a`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 0 0 0 18px;
-  height: 35px;
-  line-height: 51px;
-  border: 1px solid #e0e0e0;
-  background-color: #fcfcfc;
-  color: #888;
-  text-decoration: none;
-  white-space: nowrap;
-  font-weight: 500;
-  cursor: pointer;
-  margin-bottom: 18px;
-  z-index: 100;
-  border-radius: 10px;
-  outline: none !important;
-  transition: color .2s;
-  font-size: 15px;
-`;
-
-const ListaDeTipos = styled.ul`
-
-`
-
-const TiposDePropiedad = styled.li`
-
-`
-
-const IconoTipoDePropiedad = styled.i.attrs(
-  (props) => ({}))`
-  margin-right: 20px;
-  transition: all 0.2s;
-  font-size: 20px;
-  font-weight: 100;
-  margin-top: 3px; // se le agrego extra por la diferencia de Icono
-
-  ${(props) =>
-    props.active &&
-    `
-      transform: rotateX(180deg);
-  `}
-`;
-
-// const Pestaña desplegable = styled.ul``
 
 const BotonBusqueda = styled.button`
   width: 100%;
@@ -228,7 +169,6 @@ const BotonBusqueda = styled.button`
     &:hover:before {
       opacity: .1
     }
-  
 `;
 
 const IconoBuscar = styled.i`
@@ -237,14 +177,9 @@ const IconoBuscar = styled.i`
   font-weight: 900;
   line-height: 1;
   font-size: 16px;
-  color: #fff; // no me queda blanco el icono
+  color: #fff; 
   cursor: pointer;
-
-  svg {
-    color: #fff; // un exceso
-  }
 `;
-//ver porque hay cosas que pasa con el submit y otras movidas
 
 export {
   ContenedorPrincipal,
@@ -254,10 +189,6 @@ export {
   ContenedorBuscador,
   Encabezado,
   FormularioBuscador,
-  Etiquetas,
-  ContenedorTipoDePropiedad,
-  AnclaTipoDePropiedad,
-  IconoTipoDePropiedad,
   BotonBusqueda,
   IconoBuscar
 }

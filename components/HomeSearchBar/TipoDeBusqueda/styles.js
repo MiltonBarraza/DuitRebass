@@ -24,6 +24,10 @@ const EstilosCompartidos = css`
     width: 100%;
     margin-bottom: 10px;
   }
+
+  @media (max-width: 767px) {
+    margin: 0px;
+  }
 `;
 
 const EstilosCompartidosActivos = css`
@@ -31,11 +35,11 @@ const EstilosCompartidosActivos = css`
   color: #fff;
 `;
 
-const TipoDeBusqueda = styled(Flex)`
+const ContenedorTipoDeBusqueda = styled(Flex)`
   padding-bottom: 35px;
   position: relative;
   text-align: center;
-
+  
   > * {
     height: 35px;
     line-height: normal;
@@ -48,14 +52,21 @@ const TipoDeBusqueda = styled(Flex)`
     }
   }
 
-  @media (max-width: 767px) {
-    > * {
-      margin: 0px;
-    }
-  }
+  // @media (max-width: 767px) { // lo puse en estios compartidos porq ue tiene prioridad
+  //   > * {
+  //     margin: 0px;
+  //   }
+  // }
 
   @media (max-width: 767px) {
     width: 100%;
+  }
+
+  @media (max-width: 767px) {
+    > * {
+      margin-bottom: 15px ;
+      max-width: 400px;
+    }
   }
 `;
 
@@ -88,7 +99,7 @@ const InputEtiqueta = styled.input`
 `;
 
 export {
-  TipoDeBusqueda,
+  ContenedorTipoDeBusqueda,
   EtiquetaAlquiler,
   EtiquetaVenta,
   InputEtiqueta,

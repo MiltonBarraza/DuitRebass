@@ -1,4 +1,4 @@
-import BarraBuscadorHome from "../components/HomeSearchBar";
+import BuscadorHome from "../components/HomeSearchBar";
 
 export default function Main() {
   return (
@@ -8,7 +8,7 @@ export default function Main() {
       <h1 id="servicios">Servicios</h1>
       <h1 id="consejeros">Consejeros</h1>
       <h1 id="contacto">Contacto</h1>
-      <BarraBuscadorHome/>
+      <BuscadorHome/>
     </>
   )
 }

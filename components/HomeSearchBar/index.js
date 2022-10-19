@@ -1,10 +1,6 @@
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import React, { useState } from "react";
-import Ejemplo from "./Ejemplo";
-import ContenedorPropiedad from "./ContenedorPropiedad";
-import Etiqueta from "./Etiquetas";
 import {
   ContenedorPrincipal,
   Fondo,
@@ -13,17 +9,16 @@ import {
   ContenedorBuscador,
   Encabezado,
   FormularioBuscador,
-  // Etiquetas,
   BotonBusqueda,
   IconoBuscar,
 } from "./styles";
-import DropDown from "./Dropdown";
+import TipoDeBusqueda from "./TipoDeBusqueda";
+import TipoDePropiedad from "./TipoDePropiedad";
 
-
-const BarraBuscadorHome = () => {
+const BuscadorHome = () => {
   return (
     <ContenedorPrincipal>
-      <Fondo></Fondo>
+      <Fondo />
       <IconoAsistente href="/asistente">
         <Image
           src={"/imagenes/boton-asistente.png"}
@@ -36,18 +31,16 @@ const BarraBuscadorHome = () => {
         <ContenedorBuscador>
           <Encabezado>Encontrá el <strong>lugar</strong>, construí tu <strong>historia</strong>.</Encabezado>
           <FormularioBuscador>
-            <Etiqueta /> {/*ver si les agrego compra y venta a las etiquetas */}
-            {/* <ContenedorPropiedad /> */}
-            <DropDown/>
+            <TipoDeBusqueda />
+            <TipoDePropiedad />
             <BotonBusqueda> Buscar
               <IconoBuscar><FontAwesomeIcon icon={faSearch} /></IconoBuscar>
             </BotonBusqueda>
           </FormularioBuscador>
         </ContenedorBuscador>
       </ContenedorSecundario>
-      <Ejemplo />
     </ContenedorPrincipal>
   )
 }
 
-export default BarraBuscadorHome;
+export default BuscadorHome;
