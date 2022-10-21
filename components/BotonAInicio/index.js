@@ -1,43 +1,40 @@
-import React, {useState} from 'react';
-//import {FaArrowCircleUp} from 'react-icons/fa';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSortUp} from '@fortawesome/free-solid-svg-icons';
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons';
 import { Button } from './styles';
-  
-const ScrollButton = () =>{
-  
+
+const ScrollButton = () => {
+
   const [visible, setVisible] = useState(false)
-  
+
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300){
+    if (scrolled > 300) {
       setVisible(true)
-    } 
-    else if (scrolled <= 300){
+    }
+    else if (scrolled <= 300) {
       setVisible(false)
     }
   };
-  
-  const scrollToTop = () =>{
+
+  const scrollToTop = () => {
     window.scrollTo({
-      top: 0, 
+      top: 0,
       behavior: 'smooth'
-      /* you can also use 'auto' behaviour
-         in place of 'smooth' */
+
     });
   };
-  
-  let value 
-if (typeof window !== 'undefined') {
-  value = addEventListener('scroll', toggleVisible)
-}
-//global.addEventListener('scroll', toggleVisible);
-  
+
+  let value
+  if (typeof window !== 'undefined') {
+    value = addEventListener('scroll', toggleVisible)
+  }
+
   return (
-    <Button onClick={scrollToTop} style={{display: visible ? 'inline' : 'none'}}>
-     <FontAwesomeIcon icon={faSortUp} />
+    <Button onClick={scrollToTop} style={{ opacity: visible ? '1' : '0' }}>
+      <FontAwesomeIcon icon={faAngleUp} />
     </Button>
   );
 }
-  
+
 export default ScrollButton;

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
   
-export const Button = styled.div`
+const Button2 = styled.div`
   display: block;
   position: fixed; 
   right: 0;
-  bottom: 47px;
+  bottom: 120px;
   z-index: 9999;
   cursor: pointer;
   background-color: #e02e21;
@@ -21,3 +21,7 @@ export const Button = styled.div`
     margin-top: 8px;
   }
 `;
+
+export {
+    Button2
+}
